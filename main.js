@@ -15,19 +15,19 @@ gsap.to(".pre-chache", {
 
 gsap.from(".primary-header", {
     autoAlpha: 0,
-    delay: 6,
+    delay: 6.5,
 })
 
 const tl = gsap.timeline({ defaults: { duration: 0.4, ease: "power1.out" } });
 /* INIZIO TL */
 
 tl.from(".block-left", {
-    y: -700,
+    y: -900,
     duration: 0.7,
     ease: "none",
 })
 
-tl.add("blockLeft") // Add a label for the next tweens
+tl.add("blockLeft")
 
 tl.from(".black", {
     autoAlpha: 0,
@@ -35,7 +35,7 @@ tl.from(".black", {
 }, "blockLeft+=0.2")
 
 tl.from(".nero2", {
-    y: 1000,
+    y: 1200,
     ease: "none",
 }, "blockLeft+=0.2")
 
@@ -59,16 +59,16 @@ tl.from(".nero", {
     opacity: 0,
     x: -200,
     ease: "none",
-}, "afterOrange+=0.4")
+}, "afterOrange+=0.2")
 
 tl.from(".celeste", {
     autoAlpha: 0,
     x: 200,
-}, "afterOrange+=0.4")
+}, "afterOrange+=0.2")
 tl.from(".red", {
     autoAlpha: 0,
     x: 200,
-}, "afterOrange+=0.4")
+}, "afterOrange+=0.2")
 
 tl.from(".centered-text", {
     /* delay: 0.2, */
