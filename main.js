@@ -19,73 +19,56 @@ gsap.from(".primary-header", {
 })
 
 const tl = gsap.timeline({ defaults: { duration: 0.4, ease: "power1.out" } });
+/* INIZIO TL */
+
+tl.from(".block-left", {
+    y: -700,
+    duration: 0.7,
+    ease: "none",
+})
+
+tl.add("blockLeft") // Add a label for the next tweens
 
 tl.from(".black", {
     autoAlpha: 0,
-    x: 100,
-})
+    x: 200,
+}, "blockLeft+=0.2")
 
-tl.from(".block-left", {
-    scale: 0.5,
-    opacity: 0,
-    duration: 1,
-    ease: "none",
-    x: -200,
-    /* borderRadius: "50% 50%", */
-})
-
-tl.from(".nero", {
-    opacity: 0,
-    x: -200,
-    /* duration: 1, */
-    ease: "none",
-})
 tl.from(".nero2", {
-    opacity: 0,
-    x: -200,
-    /* duration: 1, */
+    y: 1000,
     ease: "none",
-    /* reversible: false, */
-}, "<")
+}, "blockLeft+=0.2")
 
 tl.from(".blu", {
     y: 200,
     opacity: 0.1,
-    /* duration: 3, */
     ease: "none",
-})
+}, "blockLeft+=0.2")
+
+tl.from(".orange", {
+    autoAlpha: 0,
+    x: 200,
+    ease: "none",
+}, "blockLeft+=0.2")
+
+/* PARTE 2 */
+
+tl.add("afterOrange")
+
+tl.from(".nero", {
+    opacity: 0,
+    x: -200,
+    ease: "none",
+}, "afterOrange+=0.4")
 
 tl.from(".celeste", {
     autoAlpha: 0,
-    /* delay: 0.2, */
     x: 200,
-    /* duration: 3, */
-})
-
+}, "afterOrange+=0.4")
 tl.from(".red", {
-    /* delay: 0.2, */
-    /* duration: 3, */
-    /*     x: -2000,
-        y: 1000, */
     autoAlpha: 0,
     x: 200,
-    /* rotation: 180, */
-    /*     motionPath: {
-            path: pathRed,
-        } */
-})
-
-tl.from(".orange", {
-    /* delay: 0.2, */
-    duration: 1,
-    autoAlpha: 0,
-    x: 200,
-    ease: "none",
-    /* rotation: 360, */
-    /*     motionPath: {
-            path: pathOrange,
-        } */
-}, '<-=1') // parte assieme al .red
+}, "afterOrange+=0.4")
 
 tl.from(".centered-text", {
     /* delay: 0.2, */
@@ -98,9 +81,10 @@ tl.from(".centered-text", {
     color: "#0085FE",
 }, '<')
 
+/* FINE TL */
 tl.eventCallback("onComplete", () => {
-    tl.reverse(0).delay(0); // Reverse the timeline and add a 1-second delay
-    gsap.set(".block-right", {
+    tl.reverse(0).delay(0.5); // Reverse the timeline and add a 1-second delay
+    gsap.set(".blocks", {
         delay: 4,
         zIndex: -999,
     })

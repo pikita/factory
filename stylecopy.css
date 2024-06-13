@@ -26,7 +26,7 @@
   --clr-orange-apricot: hsl(39, 94%, 55%);
   --clr-orange-tropic: hsl(8, 72%, 66%);
   --clr-orange: hsl(15, 86%, 55%);
-
+  
   --clr-red-600: hsl(353, 100%, 38%);
   --clr-red-800: hsl(360, 100%, 29%);
 
@@ -168,11 +168,12 @@ body {
   height: 100%;
   width: 100%;
   overflow: hidden;
+  background-color: #dbbbbb;
 }
 
 /* prove-------- */
 
-.pre-chache {
+.pre-chache{
   position: fixed;
   top: 0;
   left: 0;
@@ -185,7 +186,7 @@ body {
 .backgroundcolorato {
   background-color: #dbbbbb;
   z-index: -100;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   object-fit: cover;
   position: fixed;
@@ -217,7 +218,7 @@ body {
   font-size: 4rem;
   font-weight: 700;
   color: aliceblue;
-  z-index: 9999;
+  z-index: 1;
   text-shadow: 0px 0px 10px #00000046;
 }
 
@@ -237,11 +238,6 @@ body {
 .blocks {
   width: 100%;
   height: 100vh;
-  /* z-index: 300;  */
-  /* or position: fixed; */
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 
 .block {
@@ -351,40 +347,26 @@ body {
   background-color: var(--clr-orange-apricot);
 }
 
-.backgroundcolorato {
-  background-color: #dbbbbb;
-  z-index: -100;
-  width: 100%;
-  height: 100vh;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
 
-.main-container {
-  width: 1200px;
-  margin: 0 auto;
-}
+/* INTRO PAGE ----------------------------------------------------------------*/
 
+@media (min-width: 1200px) {
+  .main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
 /* NAVIGATION------------------------------------------------------- */
 
 .primary-header {
   padding-top: var(--size-500);
   padding-left: var(--size-500);
   padding-right: var(--size-700);
-/*   display: block;
-  position: fixed; */
+  /* display: block; */
+  /* position: fixed; */
   width: 100%;
 
 }
-
-@media (max-width: 1199px) {
-  .primary-header {
-    position: fixed;
-  }
-}
-
 
 .nav-wrapper {
   display: flex;
@@ -432,7 +414,7 @@ body {
     margin-left: auto;
     background: var(--clr-neutral-100);
     border-radius: var(--size-100);
-    box-shadow: 0 0 0.75em rgb(0, 0, 0, 0.05);  
+    box-shadow: 0 0 0.75em rgb(0, 0, 0, 0.05);
   }
 
   .primary-header[data-overlay]::before {
