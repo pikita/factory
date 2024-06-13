@@ -254,14 +254,15 @@ body {
   grid-template-rows: 0.8fr 1.6fr 0.6fr;
   gap: 0px 0px;
   grid-auto-flow: row;
-  grid-template-areas:
-    "nero . ."
-    ". . ."
-    "blu blu nero2";
+  grid-template-areas: 
+  "areaGrande areaGrande areaGrande"
+  "areaGrande areaGrande areaGrande"
+  "areaPiccolaSinistra areaPiccolaSinistra areaPiccolaDestra"; 
+
   width: 50%;
   height: 100%;
 
-  background-color: chocolate;
+  background-color: inherit;
 }
 
 .block-right {
@@ -311,18 +312,18 @@ body {
   }
 }
 
-.nero {
-  grid-area: nero;
+.areaGrande {
+  grid-area: areaGrande;
   background-color: black;
 }
 
-.blu {
-  grid-area: blu;
+.areaPiccolaSinistra {
+  grid-area: areaPiccolaSinistra;
   background-color: var(--clr-blue-cotton);
 }
 
-.nero2 {
-  grid-area: nero2;
+.areaPiccolaDestra {
+  grid-area: areaPiccolaDestra;
   background-color: var(--clr-violet);
 }
 
@@ -348,6 +349,14 @@ body {
 }
 
 
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+ */
+
+
 /* INTRO PAGE ----------------------------------------------------------------*/
 
 @media (min-width: 1200px) {
@@ -355,6 +364,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
   }
+
 }
 /* NAVIGATION------------------------------------------------------- */
 
