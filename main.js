@@ -10,7 +10,7 @@ gsap.registerPlugin(MotionPathPlugin, TextPlugin);
 gsap.to(".pre-chache", {
     delay: 0,
     autoAlpha: 0,
-    duration: 0.3,
+    duration: 0.5,
 })
 
 gsap.from(".primary-header", {
@@ -50,14 +50,14 @@ tl.add("afterOrange")
 
 tl.from(".red", {
     autoAlpha: 0,
-    x: -900,
+    y: -900,
     /* ease: "expo.in", */
-}, "afterOrange+=0.2")
+}, "")
 
 tl.from(".celeste", {
     autoAlpha: 0,
     x: 200,
-}, "afterOrange+=0.2")
+}, "")
 
 
 
@@ -72,11 +72,12 @@ tl.from(".centered-text", {
 
 /* FINE TL */
 tl.eventCallback("onComplete", () => {
-    tl.reverse(0).delay(0.5); // Reverse the timeline and add a 1-second delay
+    
+     tl.reverse(0).delay(0.5); // Reverse the timeline and add a 1-second delay
     gsap.set(".blocks", {
         delay: 4,
         zIndex: -999,
-    })
+    }) 
 });
 
 /* 

@@ -168,7 +168,7 @@ body {
   height: 100%;
   width: 100%;
   overflow: hidden;
-  background-color: #dbbbbb;
+  background-color: #fff;
 }
 
 /* prove-------- */
@@ -179,12 +179,12 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--clr-lilac);
+  background-color:   var(--clr-lilac);
   z-index: 9999;
 }
 
 .backgroundcolorato {
-  background-color: #dbbbbb;
+  /* background-color: #dbbbbb; */
   z-index: -100;
   width: 100vw;
   height: 100vh;
@@ -316,40 +316,40 @@ body {
 
 .areaGrande {
   grid-area: areaGrande;
-  background-color: black;
+  background-color: rgb(15, 15, 15);
   
 }
 
 .areaPiccolaSinistra {
   grid-area: areaPiccolaSinistra;
-  background-color: var(--clr-blue-cotton);
+  background-color:   #77C7D9;
 }
 
 .areaPiccolaDestra {
   grid-area: areaPiccolaDestra;
-  background-color: var(--clr-violet);
+  background-color: #FF1D7F;
 }
 
 
 .red {
   grid-area: red;
-  background-color: var(--clr-red-800);
+  background-color: #F29999;
   
 }
 
 .black {
   grid-area: black;
-  background-color: black;
+  background-color: rgb(15, 15, 15);
 }
 
 .celeste {
   grid-area: celeste;
-  background-color: var(--clr-blue-400);
+  background-color: #78BF91;
 }
 
 .orange {
   grid-area: orange;
-  background-color: var(--clr-orange-apricot);
+  background-color: #F2BF27;
 }
 
 
