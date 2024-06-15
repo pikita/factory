@@ -26,7 +26,7 @@
   --clr-orange-apricot: hsl(39, 94%, 55%);
   --clr-orange-tropic: hsl(8, 72%, 66%);
   --clr-orange: hsl(15, 86%, 55%);
-
+  
   --clr-red-600: hsl(353, 100%, 38%);
   --clr-red-800: hsl(360, 100%, 29%);
 
@@ -168,24 +168,25 @@ body {
   height: 100%;
   width: 100%;
   overflow: hidden;
+  background-color: #fff;
 }
 
 /* prove-------- */
 
-.pre-chache {
+.pre-chache{
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--clr-lilac);
+  background-color:   var(--clr-lilac);
   z-index: 9999;
 }
 
 .backgroundcolorato {
-  background-color: #dbbbbb;
+  /* background-color: #dbbbbb; */
   z-index: -100;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   object-fit: cover;
   position: fixed;
@@ -217,7 +218,7 @@ body {
   font-size: 4rem;
   font-weight: 700;
   color: aliceblue;
-  z-index: 9999;
+  z-index: 10;
   text-shadow: 0px 0px 10px #00000046;
 }
 
@@ -237,8 +238,6 @@ body {
 .blocks {
   width: 100%;
   height: 100vh;
-  /* z-index: 300;  */
-  /* or position: fixed; */
   position: absolute;
   top: 0;
   left: 0;
@@ -258,14 +257,16 @@ body {
   grid-template-rows: 0.8fr 1.6fr 0.6fr;
   gap: 0px 0px;
   grid-auto-flow: row;
-  grid-template-areas:
-    "nero . ."
-    ". . ."
-    "blu blu nero2";
+  grid-template-areas: 
+  "areaGrande areaGrande areaGrande"
+  "areaGrande areaGrande areaGrande"
+  "areaPiccolaSinistra areaPiccolaSinistra areaPiccolaDestra"; 
+
   width: 50%;
   height: 100%;
 
-  background-color: chocolate;
+  z-index: 3;
+  background-color: inherit;
 }
 
 .block-right {
@@ -293,11 +294,12 @@ body {
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
-      "nero"
-      ". ."
-      "blu";
+      "areaGrande"
+      "areaGrande"
+      "areaPiccolaDestra";
     width: 50%;
     height: 100%;
+    background-color: inherit;
   }
 
   .block-right {
@@ -315,76 +317,72 @@ body {
   }
 }
 
-.nero {
-  grid-area: nero;
-  background-color: black;
+.areaGrande {
+  grid-area: areaGrande;
+  background-color: rgb(15, 15, 15);
+  
 }
 
-.blu {
-  grid-area: blu;
-  background-color: var(--clr-blue-cotton);
+.areaPiccolaSinistra {
+  grid-area: areaPiccolaSinistra;
+  background-color:   #77C7D9;
 }
 
-.nero2 {
-  grid-area: nero2;
-  background-color: var(--clr-violet);
+.areaPiccolaDestra {
+  grid-area: areaPiccolaDestra;
+  background-color: #FF1D7F;
 }
 
 
 .red {
   grid-area: red;
-  background-color: var(--clr-red-800);
+  background-color: #F29999;
+  
 }
 
 .black {
   grid-area: black;
-  background-color: black;
+  background-color: rgb(15, 15, 15);
 }
 
 .celeste {
   grid-area: celeste;
-  background-color: var(--clr-blue-400);
+  background-color: #78BF91;
 }
 
 .orange {
   grid-area: orange;
-  background-color: var(--clr-orange-apricot);
+  background-color: #F2BF27;
 }
 
-.backgroundcolorato {
-  background-color: #dbbbbb;
-  z-index: -100;
-  width: 100%;
-  height: 100vh;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
 
-.main-container {
-  width: 1200px;
-  margin: 0 auto;
-}
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+ */
 
+
+/* INTRO PAGE ----------------------------------------------------------------*/
+
+@media (min-width: 1200px) {
+  .main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+
+}
 /* NAVIGATION------------------------------------------------------- */
 
 .primary-header {
   padding-top: var(--size-500);
   padding-left: var(--size-500);
   padding-right: var(--size-700);
-/*   display: block;
-  position: fixed; */
   width: 100%;
 
 }
-
-@media (max-width: 1199px) {
-  .primary-header {
-    position: fixed;
-  }
-}
-
 
 .nav-wrapper {
   display: flex;
@@ -432,7 +430,7 @@ body {
     margin-left: auto;
     background: var(--clr-neutral-100);
     border-radius: var(--size-100);
-    box-shadow: 0 0 0.75em rgb(0, 0, 0, 0.05);  
+    box-shadow: 0 0 0.75em rgb(0, 0, 0, 0.05);
   }
 
   .primary-header[data-overlay]::before {
