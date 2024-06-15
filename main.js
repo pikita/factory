@@ -21,16 +21,11 @@ gsap.from(".primary-header", {
 const tl = gsap.timeline({ defaults: { duration: 0.9, ease: "power1.out" } });
 /* INIZIO TL */
 
-/* tl.from(".block-left", {
-    y: -900,
-    duration: 0.7,
-    ease: "none",
-}) */
+
 
 
 tl.from(".areaGrande", {
     y: -1200,
-
 }).addLabel("primo")
 
 tl.from(".black", {
@@ -55,7 +50,8 @@ tl.add("afterOrange")
 
 tl.from(".red", {
     autoAlpha: 0,
-    x: -600,
+    x: -900,
+    /* ease: "expo.in", */
 }, "afterOrange+=0.2")
 
 tl.from(".celeste", {

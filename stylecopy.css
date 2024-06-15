@@ -218,7 +218,7 @@ body {
   font-size: 4rem;
   font-weight: 700;
   color: aliceblue;
-  z-index: 1;
+  z-index: 10;
   text-shadow: 0px 0px 10px #00000046;
 }
 
@@ -262,6 +262,7 @@ body {
   width: 50%;
   height: 100%;
 
+  z-index: 3;
   background-color: inherit;
 }
 
@@ -290,11 +291,12 @@ body {
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
-      "nero"
-      ". ."
-      "blu";
+      "areaGrande"
+      "areaGrande"
+      "areaPiccolaDestra";
     width: 50%;
     height: 100%;
+    background-color: inherit;
   }
 
   .block-right {
@@ -315,6 +317,7 @@ body {
 .areaGrande {
   grid-area: areaGrande;
   background-color: black;
+  
 }
 
 .areaPiccolaSinistra {
@@ -331,6 +334,7 @@ body {
 .red {
   grid-area: red;
   background-color: var(--clr-red-800);
+  
 }
 
 .black {
