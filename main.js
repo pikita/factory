@@ -15,7 +15,7 @@ gsap.to(".pre-chache", {
 
 gsap.from(".primary-header", {
     autoAlpha: 0,
-    delay: 6.5,
+    delay: 4,
 })
 
 const tl = gsap.timeline({ defaults: { duration: 0.9, ease: "power1.out" } });
