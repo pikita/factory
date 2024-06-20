@@ -1,4 +1,7 @@
+import './root-reset.css'
+import './utility-precache.css'
 import './style.css'
+
 import { gsap } from "gsap";
 
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
@@ -21,7 +24,7 @@ gsap.from(".primary-header", {
 const tl = gsap.timeline({ defaults: { duration: 0.9, ease: "power1.out" } });
 /* INIZIO TL */
 
-tl.kill()
+
 
 
 tl.from(".areaGrande", {

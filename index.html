@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>factory</title>
+
   <script src="main.js" type="module"></script>
   <script src="text-animation.js" type="module"></script>
   <script src="https://unpkg.com/split-type"></script>
@@ -24,34 +25,25 @@
 
 
   <main>
-    <section class="hero-grid-container">
-      <div class="container-grid">
-
-        <div class="top-left overlay">
-          <!-- video container -->
+    <section class="padding-block-100">
+      <div class="container">
+        <div class="even-columns">
+          <div class="flow">
+            <h1 class="fs-primary-heading fw-bold">Bring everyone
+              together to build
+              better products.</h1>
+            <p>Manage makes it simple for software teams to plan day-to-day tasks while keeping the larger team goals in
+              view.</p>
+            <button class="button">Get Started</button>
+          </div>
           <div class="video-container">
-            <video autoplay muted loop id="mainVideo">
-              <source src="./images/1-giuseppe-esposito-tlvssns-fashion-film-trailer.mp4" type="video/mp4">
-            </video>
-          </div>
-          <!-- end video setting -->
-        </div>
-        <!-- IMMAGINI -->
-        <div class="btm-left">
-          <div class="left-img">
-            <img src="./images/giuseppe-esposito-photography-tlvssns-mario-cattaldi-alghero-16.png" alt="" >
+            <video autoplay muted repeat src="./images/1-giuseppe-esposito-tlvssns-fashion-film-trailer.mp4"></video>
           </div>
         </div>
-        <div class="btm-right">
-          <div class="right-img">
-            <img src="./images/giuseppe-esposito-photography-tlvssns-mario-cattaldi-alghero-16.png" alt="" >
-          </div>
-        </div>
-
-
-        <div class="big-left"></div>
       </div>
     </section>
+
+
   </main>
 
 
@@ -79,7 +71,8 @@
 
 
 
-
+  <link rel="stylesheet" href="root-reset.css">
+  <link rel="stylesheet" href="utility-precache.css">
   <link href="style.css" rel="stylesheet" type="text/css" />
 </body>
 
