@@ -1,4 +1,4 @@
-import SplitType from'split-type'
+
 
 
 let typeSplit = new SplitType('[animate]', {
