@@ -20,7 +20,7 @@ gsap.from(".primary-header", {
 
 const tl = gsap.timeline({ defaults: { duration: 0.9, ease: "power1.out" } });
 /* INIZIO TL */
-
+tl.kill()
 
 tl.from(".areaGrande", {
     y: -1200,
